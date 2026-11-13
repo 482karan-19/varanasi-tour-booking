@@ -541,7 +541,9 @@ def export_bookings():
     return response
 
 
-# Run the application
+# Initialize database when application starts
+init_db()
+
+# Run the application locally
 if __name__ == "__main__":
-    init_db()
     app.run(debug=True)
