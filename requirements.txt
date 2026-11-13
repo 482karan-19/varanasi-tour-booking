@@ -2,3 +2,4 @@ Flask
 Flask-Mail
 python-dotenv
 razorpay
+gunicorn
