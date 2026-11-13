@@ -82,6 +82,7 @@ app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
 
 
+
 def init_db():
     conn = sqlite3.connect("bookings.db")
     cursor = conn.cursor()
@@ -95,50 +96,38 @@ def init_db():
             tour TEXT NOT NULL,
             date TEXT NOT NULL,
             guests INTEGER NOT NULL,
-            message TEXT
+            payment TEXT,
+            message TEXT,
+            razorpay_payment_id TEXT UNIQUE,
+            status TEXT DEFAULT 'Confirmed'
         )
     """)
-
-    cursor.execute("""
-        PRAGMA table_info(bookings)
-    """)
-    columns = [column[1] for column in cursor.fetchall()]
-
-    if "razorpay_payment_id" not in columns:
-        cursor.execute("""
-            ALTER TABLE bookings
-            ADD COLUMN razorpay_payment_id TEXT
-        """)
-
-        cursor.execute("""
-            CREATE UNIQUE INDEX IF NOT EXISTS
-            idx_bookings_razorpay_payment_id
-         ON bookings(razorpay_payment_id)
-        """)
-
-    conn.commit()
-
-    # Add payment column to existing database if it doesn't exist
-    try:
-        cursor.execute("ALTER TABLE bookings ADD COLUMN payment TEXT")
-        conn.commit()
-    except sqlite3.OperationalError:
-        pass
 
     cursor.execute("PRAGMA table_info(bookings)")
     columns = [column[1] for column in cursor.fetchall()]
 
-    if "status" not in columns:
-       cursor.execute("""
-            ALTER TABLE bookings
-            ADD COLUMN status TEXT DEFAULT 'Confirmed'
-        """)
+    migrations = {
+        "payment": "TEXT",
+        "razorpay_payment_id": "TEXT",
+        "status": "TEXT DEFAULT 'Confirmed'"
+    }
+
+    for column, definition in migrations.items():
+        if column not in columns:
+            cursor.execute(
+                f"ALTER TABLE bookings ADD COLUMN {column} {definition}"
+            )
+
+    cursor.execute("""
+        CREATE UNIQUE INDEX IF NOT EXISTS
+        idx_bookings_razorpay_payment_id
+        ON bookings(razorpay_payment_id)
+    """)
 
     conn.commit()
-
     conn.close()
 
-
+init_db()
 # Home page
 @app.route("/")
 def home():
