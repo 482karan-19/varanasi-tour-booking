@@ -53,7 +53,12 @@ Regards,
 Varanasi Tour Booking Team
 """
 
-        mail.send(msg)
+        try:
+            mail.send(msg)
+            print("Booking confirmation email sent successfully.")
+
+        except Exception as e:
+            print(f"Email sending failed: {e}")
         return True
 
     except Exception as e:
