@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bookings | Varanasi Explore</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/tours">Tours</a>
+        <a href="/destinations">Destinations</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <section class="admin-bookings">
+
+        <h1>Tour Bookings</h1>
+
+        
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h3>Total Bookings</h3>
+                <p>{{ total_bookings }}</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed Tours</h3>
+                <p>{{ completed_tours }}</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Online Payments</h3>
+                <p>{{ online_payments }}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Online Revenue</h3>
+                <p>₹{{ "{:,.2f}".format(online_revenue) }}</p>
+            </div>
+        </div>
+
+
+        
+<div class="admin-bookings-toolbar">
+    <p class="admin-bookings-description">
+        <h2>View all booking requests received from customers.</h2>
+    </p>
+
+    <a href="/admin/logout" class="admin-logout-button">
+        Logout
+    </a>
+</div>
+
+
+<div class="booking-search-container">
+    <input
+        type="text"
+        id="bookingSearch"
+        placeholder="Search by customer name, email, phone, or tour..."
+        aria-label="Search bookings"
+    >
+    
+<div class="booking-filters">
+    <select id="statusFilter" aria-label="Filter by booking status">
+        <option value="">All Statuses</option>
+        <option value="confirmed">Confirmed</option>
+        <option value="completed">Completed</option>
+        <option value="cancelled">Cancelled</option>
+    </select>
+
+    <select id="paymentFilter" aria-label="Filter by payment method">
+        <option value="">All Payment Methods</option>
+        <option value="paid online">Pay Online</option>
+        <option value="pay at venue">Pay at Venue</option>
+    </select>
+</div>
+
+</div>
+
+
+        {% if bookings %}
+
+        <div class="booking-table-container">
+
+            <table class="booking-table">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Tour</th>
+                        <th>Date</th>
+                        <th>Guests</th>
+                        <th>Payment</th>
+                        <th>Message</th>
+                        <th>Razorpay Payment ID</th>
+                        <th>Total Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for booking in bookings %}
+
+                    <tr>
+                        <td>{{ booking[0] }}</td>
+                        <td>{{ booking[1] }}</td>
+                        <td>{{ booking[2] }}</td>
+                        <td>{{ booking[3] }}</td>
+                        <td>{{ booking[4] }}</td>
+                        <td>{{ booking[5] }}</td>
+                        <td>{{ booking[6] }}</td>
+                        <td>{{ booking[7] }}</td>
+                        <td>{{ booking[8] or '-' }}</td>
+                        <td>{{ booking[9] or 'N/A' }}</td>
+                        <td>₹{{ booking[11] }}</td>
+                        <td>
+                            <form action="{{ url_for('update_booking_status', booking_id=booking[0]) }}" method="POST">
+                                <select name="status" onchange="this.form.submit()">
+                                    <option value="Confirmed" {% if booking[10] == 'Confirmed' or not booking[10] %}selected{% endif %}>Confirmed</option>
+                                    <option value="Completed" {% if booking[10] == 'Completed' %}selected{% endif %}>Completed</option>
+                                    <option value="Cancelled" {% if booking[10] == 'Cancelled' %}selected{% endif %}>Cancelled</option>
+                                </select>
+                            </form>
+                        </td>
+                        
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="no-bookings">
+            <h2>No Bookings Yet</h2>
+            <p>Customer bookings will appear here.</p>
+        </div>
+
+        {% endif %}
+
+    </section>
+
+</body>
+
+
+<script>
+const bookingSearch = document.getElementById("bookingSearch");
+const statusFilter = document.getElementById("statusFilter");
+const paymentFilter = document.getElementById("paymentFilter");
+
+function filterBookings() {
+    const searchText = bookingSearch.value.toLowerCase().trim();
+    const selectedStatus = statusFilter.value.toLowerCase();
+    const selectedPayment = paymentFilter.value.toLowerCase();
+
+    const rows = document.querySelectorAll(".booking-table tbody tr");
+
+    rows.forEach(function (row) {
+        const cells = row.querySelectorAll("td");
+        const rowText = row.innerText.toLowerCase();
+
+        // Status is in the 12th cell (index 11)
+        const statusSelect = row.querySelector('select[name="status"]');
+        const rowStatus = statusSelect
+            ? statusSelect.value.toLowerCase()
+            : "";
+
+        // Payment method is in the 8th cell (index 7)
+        const rowPayment = cells[7]
+            ? cells[7].innerText.toLowerCase().trim()
+            : "";
+
+        const matchesSearch = rowText.includes(searchText);
+        const matchesStatus =
+            !selectedStatus || rowStatus === selectedStatus;
+        const matchesPayment =
+            !selectedPayment ||
+            rowPayment.includes(selectedPayment);
+
+        row.style.display =
+            matchesSearch && matchesStatus && matchesPayment
+                ? ""
+                : "none";
+    });
+}
+
+bookingSearch.addEventListener("input", filterBookings);
+statusFilter.addEventListener("change", filterBookings);
+paymentFilter.addEventListener("change", filterBookings);
+</script>
+
+
+</html>

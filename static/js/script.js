@@ -1,0 +1,1 @@
+console.log("Jamaica Tours website loaded successfully.");

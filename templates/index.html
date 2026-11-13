@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Varanasi Tours & Travel | Explore Varanasi</title>
+
+    <meta name="description"
+          content="Explore Varanasi with unforgettable Ganga Aarti,
+          boat rides, temples, culture and spiritual experiences.">
+
+    <meta name="keywords"
+          content="Varanasi tours, Varanasi tourism, Kashi tours,
+          Ganga Aarti, Varanasi travel, Sarnath">
+
+    <meta name="author"
+          content="VaranasiExplore">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="container">
+
+            <div class="logo">
+                Varanasi<span>Explore</span>
+            </div>
+
+            <nav>
+                <a href="/">Home</a>
+                <a href="/tours">Tours</a>
+                <a href="/destinations">Destinations</a>
+                <a href="/gallery">Gallery</a>
+                <a href="/contact">Contact</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                DISCOVER VARANASI
+            </p>
+
+            <h1>
+                Experience Varanasi
+                Like Never Before
+            </h1>
+
+            <p class="description">
+                Explore the sacred Ganga Ghats, ancient temples,
+                spiritual traditions and unforgettable experiences
+                of Varanasi.
+            </p>
+
+            <a href="/tours" class="button">
+                Explore Tours
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Introduction -->
+    <section class="intro">
+
+        <div class="container">
+
+            <p class="small-title">
+                WELCOME TO VARANASI
+            </p>
+
+            <h2>
+                Your Varanasi Adventure Starts Here
+            </h2>
+
+            <p>
+                Discover the spiritual heart of India through
+                beautiful ghats, Ganga Aarti, boat rides,
+                temples, culture and local experiences.
+            </p>
+
+        </div>
+
+    </section>
+    <!-- Popular Experiences -->
+<section class="experiences">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="small-title">EXPLORE VARANASI</p>
+
+            <h2>Popular Varanasi Experiences</h2>
+
+            <p>
+                Discover the most memorable experiences of Varanasi,
+                from peaceful boat rides to spiritual ceremonies and
+                ancient temples.
+            </p>
+        </div>
+
+
+        <div class="experience-grid">
+
+            <!-- Experience 1 -->
+            <div class="experience-card">
+
+                <div class="experience-image">
+                    <img src="{{ url_for('static', filename='images/ganga-aarti.jpg') }}"
+                         alt="Ganga Aarti in Varanasi">
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>Ganga Aarti Experience</h3>
+
+                    <p>
+                        Witness the magical evening Ganga Aarti
+                        at the sacred ghats of Varanasi.
+                    </p>
+
+                    <a href="#" class="experience-link">
+                        Explore Experience →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Experience 2 -->
+            <div class="experience-card">
+
+                <div class="experience-image">
+                    <img src="{{ url_for('static', filename='images/boat-ride.jpg') }}"
+                         alt="Boat ride on the Ganges in Varanasi">
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>Sunrise Boat Ride</h3>
+
+                    <p>
+                        Experience the peaceful beauty of Varanasi
+                        while watching the sunrise over the Ganges.
+                    </p>
+
+                    <a href="#" class="experience-link">
+                        Explore Experience →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Experience 3 -->
+            <div class="experience-card">
+
+                <div class="experience-image">
+                    <img src="{{ url_for('static', filename='images/temple-tour.jpg') }}"
+                         alt="Temple tour in Varanasi">
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>Temple Tour</h3>
+
+                    <p>
+                        Explore ancient temples and discover the
+                        spiritual heritage of India's oldest city.
+                    </p>
+
+                    <a href="#" class="experience-link">
+                        Explore Experience →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Experience 4 -->
+            <div class="experience-card">
+
+                <div class="experience-image">
+                    <img src="{{ url_for('static', filename='images/sarnath.jpg') }}"
+                         alt="Sarnath near Varanasi">
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>Sarnath Tour</h3>
+
+                    <p>
+                        Visit the historic Buddhist site of Sarnath
+                        and explore its remarkable history.
+                    </p>
+
+                    <a href="#" class="experience-link">
+                        Explore Experience →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Experience 5 -->
+            <div class="experience-card">
+
+                <div class="experience-image">
+                    <img src="{{ url_for('static', filename='images/food-tour.jpg') }}"
+                         alt="Traditional food in Varanasi">
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>Varanasi Food Tour</h3>
+
+                    <p>
+                        Taste authentic local food, street snacks
+                        and famous sweets of Varanasi.
+                    </p>
+
+                    <a href="#" class="experience-link">
+                        Explore Experience →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Experience 6 -->
+            <div class="experience-card">
+
+                <div class="experience-image">
+                    <img src="{{ url_for('static', filename='images/ghats.jpg') }}"
+                         alt="Ghats of Varanasi">
+                </div>
+
+                <div class="experience-content">
+
+                    <h3>Heritage Ghats Tour</h3>
+
+                    <p>
+                        Walk through the historic ghats and discover
+                        the stories and traditions of Varanasi.
+                    </p>
+
+                    <a href="#" class="experience-link">
+                        Explore Experience →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Top Destinations -->
+<section class="destinations">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="small-title">MUST VISIT PLACES</p>
+
+            <h2>Top Destinations in Varanasi</h2>
+
+            <p>
+                Explore the iconic places that make Varanasi one of
+                India's most fascinating and spiritual destinations.
+            </p>
+
+        </div>
+
+
+        <div class="destination-grid">
+
+            <!-- Destination 1 -->
+            <div class="destination-card">
+
+                <img src="{{ url_for('static', filename='images/dashashwamedh-ghat.jpg') }}"
+                     alt="Dashashwamedh Ghat Varanasi">
+
+                <div class="destination-overlay">
+
+                    <h3>Dashashwamedh Ghat</h3>
+
+                    <p>Famous for the spectacular Ganga Aarti.</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Destination 2 -->
+            <div class="destination-card">
+
+                <img src="{{ url_for('static', filename='images/kashi-vishwanath.jpg') }}"
+                     alt="Kashi Vishwanath Temple">
+
+                <div class="destination-overlay">
+
+                    <h3>Kashi Vishwanath Temple</h3>
+
+                    <p>One of India's most sacred Shiva temples.</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Destination 3 -->
+            <div class="destination-card">
+
+                <img src="{{ url_for('static', filename='images/manikarnika-ghat.jpg') }}"
+                     alt="Manikarnika Ghat Varanasi">
+
+                <div class="destination-overlay">
+
+                    <h3>Manikarnika Ghat</h3>
+
+                    <p>One of the oldest and most significant ghats.</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Destination 4 -->
+            <div class="destination-card">
+
+                <img src="{{ url_for('static', filename='images/sarnath-destination.jpg') }}"
+                     alt="Sarnath Varanasi">
+
+                <div class="destination-overlay">
+
+                    <h3>Sarnath</h3>
+
+                    <p>A historic Buddhist pilgrimage destination.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-us">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="small-title">WHY TRAVEL WITH US</p>
+
+            <h2>Why Choose VaranasiExplore?</h2>
+
+            <p>
+                We help you experience Varanasi comfortably,
+                safely and authentically.
+            </p>
+
+        </div>
+
+
+        <div class="why-us-grid">
+
+            <!-- Feature 1 -->
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ★
+                </div>
+
+                <h3>Local Experience</h3>
+
+                <p>
+                    Discover Varanasi with experiences designed
+                    around the city's culture, history and traditions.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 2 -->
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ✓
+                </div>
+
+                <h3>Trusted & Reliable</h3>
+
+                <p>
+                    Enjoy a reliable travel experience with
+                    carefully planned tours and local services.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 3 -->
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ₹
+                </div>
+
+                <h3>Best Value</h3>
+
+                <p>
+                    Get memorable Varanasi experiences at
+                    transparent and competitive prices.
+                </p>
+
+            </div>
+
+
+            <!-- Feature 4 -->
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ☎
+                </div>
+
+                <h3>24/7 Support</h3>
+
+                <p>
+                    Our team is available to help you before,
+                    during and after your Varanasi experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Varanasi Gallery -->
+<section class="gallery">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="small-title">EXPLORE THROUGH PHOTOS</p>
+
+            <h2>Discover the Beauty of Varanasi</h2>
+
+            <p>
+                Take a visual journey through the sacred ghats,
+                temples, streets and unforgettable moments of Varanasi.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <!-- Gallery Image 1 -->
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gallery-ghats.jpg') }}"
+                     alt="Beautiful ghats of Varanasi">
+            </div>
+
+
+            <!-- Gallery Image 2 -->
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gallery-aarti.jpg') }}"
+                     alt="Ganga Aarti in Varanasi">
+            </div>
+
+
+            <!-- Gallery Image 3 -->
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gallery-boat.jpg') }}"
+                     alt="Boat ride on the Ganges">
+            </div>
+
+
+            <!-- Gallery Image 4 -->
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gallery-temple.jpg') }}"
+                     alt="Temple in Varanasi">
+            </div>
+
+
+            <!-- Gallery Image 5 -->
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gallery-sarnath.jpg') }}"
+                     alt="Sarnath near Varanasi">
+            </div>
+
+
+            <!-- Gallery Image 6 -->
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gallery-streets.jpg') }}"
+                     alt="Streets of Varanasi">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Customer Testimonials -->
+<section class="testimonials">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="small-title">TRAVELLER REVIEWS</p>
+
+            <h2>What Our Guests Say</h2>
+
+            <p>
+                Hear from travellers who experienced the beauty,
+                culture and spirituality of Varanasi with us.
+            </p>
+
+        </div>
+
+
+        <div class="testimonial-grid">
+
+            <!-- Review 1 -->
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★ ★ ★ ★ ★
+                </div>
+
+                <p class="review">
+                    "The sunrise boat ride was an unforgettable
+                    experience. Everything was well organised and
+                    our guide was very helpful."
+                </p>
+
+                <div class="customer">
+
+                    <div class="customer-avatar">
+                        A
+                    </div>
+
+                    <div>
+                        <h3>Arjun Mehta</h3>
+                        <p>Traveller from Delhi</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Review 2 -->
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★ ★ ★ ★ ★
+                </div>
+
+                <p class="review">
+                    "VaranasiExplore made our Varanasi trip
+                    comfortable and memorable. The Ganga Aarti
+                    experience was absolutely beautiful."
+                </p>
+
+                <div class="customer">
+
+                    <div class="customer-avatar">
+                        S
+                    </div>
+
+                    <div>
+                        <h3>Sarah Williams</h3>
+                        <p>Traveller from London</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Review 3 -->
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★ ★ ★ ★ ★
+                </div>
+
+                <p class="review">
+                    "A wonderful way to explore the spiritual side
+                    of Varanasi. The temple and heritage tour was
+                    informative and enjoyable."
+                </p>
+
+                <div class="customer">
+
+                    <div class="customer-avatar">
+                        R
+                    </div>
+
+                    <div>
+                        <h3>Rahul Sharma</h3>
+                        <p>Traveller from Mumbai</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Booking CTA -->
+<section class="booking-cta">
+
+    <div class="container">
+
+        <div class="booking-content">
+
+            <p class="small-title">
+                PLAN YOUR JOURNEY
+            </p>
+
+            <h2>
+                Ready to Explore Varanasi?
+            </h2>
+
+            <p>
+                Create unforgettable memories with our carefully
+                planned tours and authentic local experiences.
+            </p>
+
+            <a href="#" class="booking-button">
+                Book Your Experience
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- About -->
+            <div class="footer-column">
+
+                <h3 class="footer-logo">
+                    Varanasi<span>Explore</span>
+                </h3>
+
+                <p>
+                    Discover the spiritual heart of India through
+                    authentic tours, local experiences, sacred ghats,
+                    temples and unforgettable journeys.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-column">
+
+                <h4>Quick Links</h4>
+
+                <a href="/">Home</a>
+                <a href="/tours">Tours</a>
+                <a href="/destinations">Destinations</a>
+                <a href="/gallery">Gallery</a>
+                <a href="/contact">Contact</a>
+
+            </div>
+
+
+            <!-- Experiences -->
+            <div class="footer-column">
+
+                <h4>Popular Experiences</h4>
+
+                <a href="#">Ganga Aarti</a>
+                <a href="#">Sunrise Boat Ride</a>
+                <a href="#">Temple Tour</a>
+                <a href="#">Sarnath Tour</a>
+                <a href="#">Food Tour</a>
+
+            </div>
+
+
+            <!-- Contact -->
+            <div class="footer-column">
+
+                <h4>Contact Us</h4>
+
+                <p>
+                    📍 Varanasi, Uttar Pradesh, India
+                </p>
+
+                <p>
+                    📞 +91 98765 43210
+                </p>
+
+                <p>
+                    ✉️ info@varanasiexplore.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 VaranasiExplore. All Rights Reserved.
+            </p>
+
+            <p>
+                Explore Varanasi. Experience the Extraordinary.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Varanasi Explore</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="container">
+
+            <div class="logo">
+                Varanasi<span>Explore</span>
+            </div>
+
+            <nav>
+
+                <a href="/">Home</a>
+
+                <a href="/tours">Tours</a>
+
+                <a href="/destinations">Destinations</a>
+
+                <a href="/gallery">Gallery</a>
+
+                <a href="/contact">Contact</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- Tours Hero -->
+    <section class="tours-hero">
+
+        <div class="tours-hero-content">
+
+            <p class="small-title">
+                EXPLORE VARANASI
+            </p>
+
+            <h1>
+                Tours & Experiences
+            </h1>
+
+            <p>
+                Discover the spiritual, cultural and historical
+                side of Varanasi through unforgettable experiences.
+            </p>
+
+        </div>
+
+    </section>
+    <!-- Gallery Section -->
+    <section class="gallery-page">
+
+        <div class="section-heading">
+            <h2>Moments of Varanasi</h2>
+            <p>
+                Discover the colors, culture and spiritual beauty
+                of the ancient city.
+            </p>
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='images/gallery-ghats.jpg') }}"
+                    alt="Varanasi Ghats"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='images/gallery-aarti.jpg') }}"
+                    alt="Ganga Aarti in Varanasi"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='images/gallery-boat.jpg') }}"
+                    alt="Boat Ride on the Ganges"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='images/gallery-temple.jpg') }}"
+                    alt="Varanasi Temple"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='images/gallery-sarnath.jpg') }}"
+                    alt="Sarnath"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='images/gallery-streets.jpg') }}"
+                    alt="Streets of Varanasi"
+                >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Gallery CTA -->
+    <section class="gallery-cta">
+
+        <h2>Experience Varanasi in Person</h2>
+
+        <p>
+            Explore our tours and create your own unforgettable memories.
+        </p>
+
+        <a href="/tours" class="gallery-cta-button">
+            Explore Tours
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+                <h3>Varanasi Explore</h3>
+
+                <p>
+                    Discover the spiritual, cultural and historical
+                    beauty of Varanasi with unforgettable local experiences.
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="/">Home</a>
+                <a href="/tours">Tours</a>
+                <a href="/destinations">Destinations</a>
+                <a href="/gallery">Gallery</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ info@varanasiexplore.com</p>
+                <p>📍 Varanasi, Uttar Pradesh, India</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Varanasi Explore. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

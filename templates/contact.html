@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Varanasi Explore</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="container">
+
+            <div class="logo">
+                Varanasi<span>Explore</span>
+            </div>
+
+            <nav>
+
+                <a href="/">Home</a>
+
+                <a href="/tours">Tours</a>
+
+                <a href="/destinations">Destinations</a>
+
+                <a href="/gallery">Gallery</a>
+
+                <a href="/contact">Contact</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- Tours Hero -->
+    <section class="tours-hero">
+
+        <div class="tours-hero-content">
+
+            <p class="small-title">
+                EXPLORE VARANASI
+            </p>
+
+            <h1>
+                Tours & Experiences
+            </h1>
+
+            <p>
+                Discover the spiritual, cultural and historical
+                side of Varanasi through unforgettable experiences.
+            </p>
+
+        </div>
+
+    </section>
+    
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+            <!-- CONTACT INFORMATION -->
+            <div class="contact-info">
+
+                <h2>Get In Touch</h2>
+
+                <p>
+                    Contact us for tour information, bookings,
+                    travel assistance, or any questions about Varanasi.
+                </p>
+
+                <div class="contact-item">
+                    <h3>📍 Location</h3>
+                    <p>Varanasi, Uttar Pradesh, India</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>📞 Phone</h3>
+                    <p>+91 98765 43210</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>✉️ Email</h3>
+                    <p>info@varanasiexplore.com</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>🕒 Working Hours</h3>
+                    <p>Monday - Sunday: 9:00 AM - 8:00 PM</p>
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form">
+
+                <h2>Send Us a Message</h2>
+
+                <form method="POST" action="/contact">
+
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+
+                    <label for="phone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+
+                    <button type="submit">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="contact-cta">
+
+        <h2>Ready to Explore Varanasi?</h2>
+
+        <p>
+            Discover the spiritual, cultural and historical beauty of the city.
+        </p>
+
+        <a href="/tours" class="contact-cta-button">
+            Explore Our Tours
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>Varanasi Explore</h3>
+
+            <p>
+                Discover the spiritual heart of India with unforgettable
+                tours and experiences.
+            </p>
+
+            <p>
+                © 2026 Varanasi Explore. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

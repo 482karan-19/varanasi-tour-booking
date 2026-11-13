@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Destinations | Varanasi Explore</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="container">
+
+            <div class="logo">
+                Varanasi<span>Explore</span>
+            </div>
+
+            <nav>
+
+                <a href="/">Home</a>
+
+                <a href="/tours">Tours</a>
+
+                <a href="/destinations">Destinations</a>
+
+                <a href="/gallery">Gallery</a>
+
+                <a href="/contact">Contact</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- Tours Hero -->
+    <section class="tours-hero">
+
+        <div class="tours-hero-content">
+
+            <p class="small-title">
+                EXPLORE VARANASI
+            </p>
+
+            <h1>
+                Tours & Experiences
+            </h1>
+
+            <p>
+                Discover the spiritual, cultural and historical
+                side of Varanasi through unforgettable experiences.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations-page">
+
+        <div class="section-heading">
+            <h2>Top Destinations</h2>
+            <p>Places you should not miss during your Varanasi journey.</p>
+        </div>
+
+
+        <div class="destination-grid">
+
+            <!-- Destination 1 -->
+            <div class="destination-card">
+
+                <img
+                    src="{{ url_for('static', filename='images/dashashwamedh-ghat.jpg') }}"
+                    alt="Dashashwamedh Ghat"
+                >
+
+                <div class="destination-content">
+
+                    <h3>Dashashwamedh Ghat</h3>
+
+                    <p>
+                        Experience the famous Ganga Aarti and witness
+                        the spiritual atmosphere of one of Varanasi's
+                        most iconic ghats.
+                    </p>
+
+                    <span>📍 Varanasi</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Destination 2 -->
+            <div class="destination-card">
+
+                <img
+                    src="{{ url_for('static', filename='images/kashi-vishwanath.jpg') }}"
+                    alt="Kashi Vishwanath Temple"
+                >
+
+                <div class="destination-content">
+
+                    <h3>Kashi Vishwanath Temple</h3>
+
+                    <p>
+                        Visit one of the most important Hindu temples
+                        dedicated to Lord Shiva and discover the spiritual
+                        heart of Varanasi.
+                    </p>
+
+                    <span>📍 Vishwanath Gali</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Destination 3 -->
+            <div class="destination-card">
+
+                <img
+                    src="{{ url_for('static', filename='images/manikarnika-ghat.jpg') }}"
+                    alt="Manikarnika Ghat"
+                >
+
+                <div class="destination-content">
+
+                    <h3>Manikarnika Ghat</h3>
+
+                    <p>
+                        Explore one of Varanasi's oldest and most significant
+                        ghats, deeply connected with the city's spiritual traditions.
+                    </p>
+
+                    <span>📍 Varanasi Ghats</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Destination 4 -->
+            <div class="destination-card">
+
+                <img
+                    src="{{ url_for('static', filename='images/sarnath-destination.jpg') }}"
+                    alt="Sarnath"
+                >
+
+                <div class="destination-content">
+
+                    <h3>Sarnath</h3>
+
+                    <p>
+                        Discover the historic Buddhist site where Buddha
+                        delivered his first sermon after attaining enlightenment.
+                    </p>
+
+                    <span>📍 Sarnath, Varanasi</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Call To Action -->
+    <section class="destination-cta">
+
+        <h2>Ready to Explore Varanasi?</h2>
+
+        <p>
+            Choose your experience and start planning your journey today.
+        </p>
+
+        <a href="/tours" class="destination-cta-button">
+            Explore Our Tours
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+                <h3>Varanasi Explore</h3>
+
+                <p>
+                    Discover the spiritual, cultural and historical
+                    beauty of Varanasi with unforgettable local experiences.
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="/">Home</a>
+                <a href="/tours">Tours</a>
+                <a href="/destinations">Destinations</a>
+                <a href="#">Gallery</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ info@varanasiexplore.com</p>
+                <p>📍 Varanasi, Uttar Pradesh, India</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Varanasi Explore. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

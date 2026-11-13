@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Your Tour | Varanasi Explore</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tours">Tours</a>
+            <a href="#">Destinations</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- Booking Hero -->
+    <section class="booking-hero">
+        <div class="booking-hero-content">
+            <h1>Book Your Varanasi Experience</h1>
+            <p>
+                Plan your journey and create unforgettable memories
+                in the spiritual heart of India.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+
+        <div class="booking-container">
+
+            <div class="booking-info">
+                <h2>Plan Your Trip</h2>
+
+                <p>
+                    Fill out the form and our team will contact you
+                    shortly to confirm your booking.
+                </p>
+
+                <div class="booking-feature">
+                    <strong>✓ Experienced Local Guides</strong>
+                    <p>Explore Varanasi with knowledgeable local guides.</p>
+                </div>
+
+                <div class="booking-feature">
+                    <strong>✓ Flexible Tour Options</strong>
+                    <p>Choose an experience that matches your schedule.</p>
+                </div>
+
+                <div class="booking-feature">
+                    <strong>✓ Easy Booking</strong>
+                    <p>Simple and convenient booking process.</p>
+                </div>
+            </div>
+
+
+            <!-- Booking Form -->
+            <div class="booking-form-box">
+
+                <h2>Booking Details</h2>
+
+                <form action="/booking" method="POST">
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="tour">Select Tour</label>
+
+                        <select id="tour" name="tour" required>
+
+    <option value="" {% if not selected_tour %}selected{% endif %}>
+        Choose a tour
+    </option>
+
+    <option value="Ganga Aarti Experience"
+        {% if selected_tour == "Ganga Aarti Experience" %}selected{% endif %}>
+        Ganga Aarti Experience
+    </option>
+
+    <option value="Sunrise Boat Ride"
+        {% if selected_tour == "Sunrise Boat Ride" %}selected{% endif %}>
+        Sunrise Boat Ride
+    </option>
+
+    <option value="Varanasi Temple Tour"
+        {% if selected_tour == "Varanasi Temple Tour" %}selected{% endif %}>
+        Varanasi Temple Tour
+    </option>
+
+    <option value="Sarnath Half-Day Tour"
+        {% if selected_tour == "Sarnath Half-Day Tour" %}selected{% endif %}>
+        Sarnath Half-Day Tour
+    </option>
+
+    <option value="Varanasi Food Tour"
+        {% if selected_tour == "Varanasi Food Tour" %}selected{% endif %}>
+        Varanasi Food Tour
+    </option>
+
+    <option value="Heritage Ghats Walking Tour"
+        {% if selected_tour == "Heritage Ghats Walking Tour" %}selected{% endif %}>
+        Heritage Ghats Walking Tour
+    </option>
+    
+</select>
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="date">Travel Date</label>
+
+                            <input
+                                type="date"
+                                id="date"
+                                name="date"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+
+                            <input
+                                type="number"
+                                id="guests"
+                                name="guests"
+                                min="1"
+                                max="50"
+                                placeholder="Number of guests"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment">Payment Method</label>
+
+                        <select id="payment" name="payment" required>
+                            <option value="">Choose payment method</option>
+                            <option value="Pay Online">Pay Online</option>
+                            <option value="Pay at Venue">Pay at Venue</option>
+                        </select>
+                    </div>
+
+                    <div class="price-preview">
+                    <p>Price per guest: ₹<span id="tour-price">0</span></p>
+                    <p>Total amount: ₹<span id="total-price">0</span></p>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="message">Additional Message</label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Tell us anything important about your trip..."
+                        ></textarea>
+                    </div>
+
+
+                    <button type="submit" class="booking-submit">
+                        Submit Booking Request
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+                <h3>Varanasi Explore</h3>
+                <p>
+                    Discover the spiritual, cultural and historical
+                    beauty of Varanasi with unforgettable local experiences.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="/">Home</a>
+                <a href="/tours">Tours</a>
+                <a href="#">Destinations</a>
+                <a href="#">Gallery</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ info@varanasiexplore.com</p>
+                <p>📍 Varanasi, Uttar Pradesh, India</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Varanasi Explore. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+<script>
+    const tourPrices = {
+        "Ganga Aarti Experience": 999,
+        "Sunrise Boat Ride": 799,
+        "Varanasi Temple Tour": 1499,
+        "Sarnath Half-Day Tour": 1299,
+        "Varanasi Food Tour": 1099,
+        "Heritage Ghats Walking Tour": 899
+    };
+
+    const tourSelect = document.getElementById("tour");
+    const guestsInput = document.getElementById("guests");
+    const tourPriceDisplay = document.getElementById("tour-price");
+    const totalPriceDisplay = document.getElementById("total-price");
+
+    function updatePrice() {
+        const price = tourPrices[tourSelect.value] || 0;
+        const guests = Math.max(0, parseInt(guestsInput.value) || 0);
+
+        tourPriceDisplay.textContent = price;
+        totalPriceDisplay.textContent = price * guests;
+    }
+
+    tourSelect.addEventListener("change", updatePrice);
+    guestsInput.addEventListener("input", updatePrice);
+
+    updatePrice();
+</script>
+
+</body>
+</html>

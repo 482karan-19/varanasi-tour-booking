@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Confirmed | Varanasi Explore</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tours">Tours</a>
+            <a href="#">Destinations</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- Success Section -->
+    <section class="booking-success">
+
+        <div class="success-box">
+
+            <div class="success-icon">✓</div>
+
+            <h1>Booking Confirmed Successfully!</h1>
+
+            <p>
+                Thank you for choosing Varanasi Explore.
+                Your booking request has been successfully submitted.
+            </p>
+
+            <p>
+                Your online payment has been verified and your booking details have been recorded successfully.
+                
+            <div class="booking-details">
+    <h2>Your Booking Details</h2>
+
+    <div class="booking-detail-row">
+        <span>Customer Name</span>
+        <strong>{{ booking.name }}</strong>
+    </div>
+
+    <div class="booking-detail-row">
+        <span>Tour Name</span>
+        <strong>{{ booking.tour }}</strong>
+    </div>
+
+    <div class="booking-detail-row">
+        <span>Booking Date</span>
+        <strong>{{ booking.date }}</strong>
+    </div>
+
+    <div class="booking-detail-row">
+        <span>Number of Guests</span>
+        <strong>{{ booking.guests }}</strong>
+    </div>
+
+    <div class="booking-detail-row">
+        <span>Payment Method</span>
+        <strong>{{ payment_method }}</strong>
+    </div>
+
+    <div class="booking-detail-row">
+        <span>Payment Status</span>
+        <strong class="payment-success">{{ payment_status }}</strong>
+    </div>
+
+    <div class="booking-detail-row total-row">
+        <span>Total Amount</span>
+        <strong>₹{{ total_amount }}</strong>
+    </div>
+            </div>  
+            </p>
+
+            <div class="success-buttons">
+                <a href="/tours" class="success-button">
+                    Explore More Tours
+                </a>
+
+                <a href="/" class="success-button secondary">
+                    Back to Home
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+                <h3>Varanasi Explore</h3>
+                <p>
+                    Discover the spiritual, cultural and historical
+                    beauty of Varanasi with unforgettable local experiences.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="/">Home</a>
+                <a href="/tours">Tours</a>
+                <a href="#">Destinations</a>
+                <a href="#">Gallery</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ info@varanasiexplore.com</p>
+                <p>📍 Varanasi, Uttar Pradesh, India</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Varanasi Explore. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Varanasi Tours & Experiences | VaranasiExplore</title>
+
+    <meta name="description"
+          content="Explore Varanasi tours, Ganga Aarti,
+          boat rides, temple tours, Sarnath tours and local
+          experiences with VaranasiExplore.">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="container">
+
+            <div class="logo">
+                Varanasi<span>Explore</span>
+            </div>
+
+            <nav>
+
+                <a href="/">Home</a>
+
+                <a href="/tours">Tours</a>
+
+                <a href="/destinations">Destinations</a>
+
+                <a href="/gallery">Gallery</a>
+
+                <a href="/contact">Contact</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- Tours Hero -->
+    <section class="tours-hero">
+
+        <div class="tours-hero-content">
+
+            <p class="small-title">
+                EXPLORE VARANASI
+            </p>
+
+            <h1>
+                Tours & Experiences
+            </h1>
+
+            <p>
+                Discover the spiritual, cultural and historical
+                side of Varanasi through unforgettable experiences.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Tours Section -->
+    <section class="tours-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="small-title">
+                    OUR EXPERIENCES
+                </p>
+
+                <h2>
+                    Choose Your Varanasi Experience
+                </h2>
+
+                <p>
+                    From peaceful sunrise boat rides to historic
+                    temple tours, choose an experience that suits
+                    your journey.
+                </p>
+
+            </div>
+
+
+            <div class="tour-grid">
+
+
+                <!-- Tour 1 -->
+                <div class="tour-card">
+
+                    <div class="tour-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/ganga-aarti.jpg') }}"
+                            alt="Ganga Aarti Experience">
+
+                    </div>
+
+                    <div class="tour-content">
+
+                        <span class="tour-category">
+                            Spiritual Experience
+                        </span>
+
+                        <h3>
+                            Ganga Aarti Experience
+                        </h3>
+
+                        <p>
+                            Witness the beautiful evening Ganga Aarti
+                            ceremony at the sacred ghats of Varanasi.
+                        </p>
+
+                        <div class="tour-info">
+
+                            <span>⏱ 2 Hours</span>
+
+                            <span>⭐ 4.9</span>
+
+                        </div>
+
+                        <div class="tour-bottom">
+
+                            <strong>
+                                ₹999
+                            </strong>
+
+                            <a href="/booking?tour=Ganga%20Aarti%20Experience" class="tour-button">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tour 2 -->
+                <div class="tour-card">
+
+                    <div class="tour-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/boat-ride.jpg') }}"
+                            alt="Sunrise Boat Ride">
+
+                    </div>
+
+                    <div class="tour-content">
+
+                        <span class="tour-category">
+                            Boat Experience
+                        </span>
+
+                        <h3>
+                            Sunrise Boat Ride
+                        </h3>
+
+                        <p>
+                            Watch Varanasi awaken as you sail along
+                            the Ganges during a peaceful sunrise.
+                        </p>
+
+                        <div class="tour-info">
+
+                            <span>⏱ 2 Hours</span>
+
+                            <span>⭐ 4.9</span>
+
+                        </div>
+
+                        <div class="tour-bottom">
+
+                            <strong>
+                                ₹799
+                            </strong>
+
+                            <a href="/booking?tour=Sunrise%20Boat%20Ride" class="tour-button">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tour 3 -->
+                <div class="tour-card">
+
+                    <div class="tour-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/temple-tour.jpg') }}"
+                            alt="Varanasi Temple Tour">
+
+                    </div>
+
+                    <div class="tour-content">
+
+                        <span class="tour-category">
+                            Heritage Tour
+                        </span>
+
+                        <h3>
+                            Varanasi Temple Tour
+                        </h3>
+
+                        <p>
+                            Explore ancient temples and discover
+                            the spiritual heritage of Kashi.
+                        </p>
+
+                        <div class="tour-info">
+
+                            <span>⏱ 4 Hours</span>
+
+                            <span>⭐ 4.8</span>
+
+                        </div>
+
+                        <div class="tour-bottom">
+
+                            <strong>
+                                ₹1,499
+                            </strong>
+
+                            <a href="/booking?tour=Varanasi%20Temple%20Tour" class="tour-button">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tour 4 -->
+                <div class="tour-card">
+
+                    <div class="tour-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/sarnath.jpg') }}"
+                            alt="Sarnath Tour">
+
+                    </div>
+
+                    <div class="tour-content">
+
+                        <span class="tour-category">
+                            Historical Tour
+                        </span>
+
+                        <h3>
+                            Sarnath Half-Day Tour
+                        </h3>
+
+                        <p>
+                            Explore the historic Buddhist site of
+                            Sarnath and its important monuments.
+                        </p>
+
+                        <div class="tour-info">
+
+                            <span>⏱ 4 Hours</span>
+
+                            <span>⭐ 4.8</span>
+
+                        </div>
+
+                        <div class="tour-bottom">
+
+                            <strong>
+                                ₹1,299
+                            </strong>
+
+                            <a href="/booking?tour=Sarnath%20Half-Day%20Tour" class="tour-button">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tour 5 -->
+                <div class="tour-card">
+
+                    <div class="tour-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/food-tour.jpg') }}"
+                            alt="Varanasi Food Tour">
+
+                    </div>
+
+                    <div class="tour-content">
+
+                        <span class="tour-category">
+                            Food Experience
+                        </span>
+
+                        <h3>
+                            Varanasi Food Tour
+                        </h3>
+
+                        <p>
+                            Taste famous local dishes, street food
+                            and traditional sweets of Varanasi.
+                        </p>
+
+                        <div class="tour-info">
+
+                            <span>⏱ 3 Hours</span>
+
+                            <span>⭐ 4.9</span>
+
+                        </div>
+
+                        <div class="tour-bottom">
+
+                            <strong>
+                                ₹1,099
+                            </strong>
+
+                            <a href="/booking?tour=Varanasi%20Food%20Tour" class="tour-button">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tour 6 -->
+                <div class="tour-card">
+
+                    <div class="tour-image">
+
+                        <img
+                            src="{{ url_for('static', filename='images/ghats.jpg') }}"
+                            alt="Varanasi Heritage Ghats Tour">
+
+                    </div>
+
+                    <div class="tour-content">
+
+                        <span class="tour-category">
+                            Heritage Experience
+                        </span>
+
+                        <h3>
+                            Heritage Ghats Walking Tour
+                        </h3>
+
+                        <p>
+                            Walk through the historic ghats and
+                            discover the stories of ancient Varanasi.
+                        </p>
+
+                        <div class="tour-info">
+
+                            <span>⏱ 3 Hours</span>
+
+                            <span>⭐ 4.8</span>
+
+                        </div>
+
+                        <div class="tour-bottom">
+
+                            <strong>
+                                ₹899
+                            </strong>
+
+                            <a href="/booking?tour=Heritage%20Ghats%20Walking%20Tour" class="tour-button">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-column">
+
+                    <h3 class="footer-logo">
+                        Varanasi<span>Explore</span>
+                    </h3>
+
+                    <p>
+                        Discover the spiritual heart of India
+                        through authentic tours and local experiences.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Quick Links</h4>
+
+                    <a href="/index">Home</a>
+
+                    <a href="/tours">Tours</a>
+
+                    <a href="/destinations">Destinations</a>
+
+                    <a href="/gallery">Gallery</a>
+
+                    <a href="/contact">Contact</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Popular Tours</h4>
+
+                    <a href="#">Ganga Aarti</a>
+
+                    <a href="#">Sunrise Boat Ride</a>
+
+                    <a href="#">Temple Tour</a>
+
+                    <a href="#">Sarnath Tour</a>
+
+                    <a href="#">Food Tour</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Contact Us</h4>
+
+                    <p>
+                        📍 Varanasi, Uttar Pradesh, India
+                    </p>
+
+                    <p>
+                        📞 +91 98765 43210
+                    </p>
+
+                    <p>
+                        ✉️ info@varanasiexplore.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 VaranasiExplore. All Rights Reserved.
+                </p>
+
+                <p>
+                    Explore Varanasi. Experience the Extraordinary.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

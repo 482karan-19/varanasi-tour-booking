@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Payment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="booking-container">
+        <h1>Complete Your Payment</h1>
+        <p>Total booking amount: ₹{{ "%.2f"|format(amount / 100) }}</p>
+
+        <button id="pay-button" type="button">Pay with Razorpay</button>
+        <p id="payment-message"></p>
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        const options = {
+            key: {{ key_id | tojson }},
+            amount: {{ amount | tojson }},
+            currency: "INR",
+            name: "Varanasi Tour & Travel",
+            description: "Test booking payment",
+            order_id: {{ order_id | tojson }},
+            handler: function (response) {
+                const form = document.createElement("form");
+                form.method = "POST";
+                form.action = "/verify-payment";
+
+                const fields = {
+                    razorpay_payment_id: response.razorpay_payment_id,
+                    razorpay_order_id: response.razorpay_order_id,
+                    razorpay_signature: response.razorpay_signature
+                };
+
+                for (const name in fields) {
+                    const input = document.createElement("input");
+                    input.type = "hidden";
+                    input.name = name;
+                    input.value = fields[name];
+                    form.appendChild(input);
+                }
+
+                document.body.appendChild(form);
+                form.submit();
+            },
+            modal: {
+                ondismiss: function () {
+                    document.getElementById("payment-message").textContent =
+                        "Payment window closed.";
+                }
+            },
+            theme: {
+                color: "#e76f51"
+            }
+        };
+
+        document.getElementById("pay-button").addEventListener("click", function () {
+            const checkout = new Razorpay(options);
+            checkout.open();
+        });
+    </script>
+</body>
+</html>

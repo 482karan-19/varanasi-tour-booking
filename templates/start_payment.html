@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starting Secure Payment</title>
+</head>
+<body>
+    <p>Preparing your secure payment...</p>
+
+    <form id="payment-form" action="{{ url_for('create_order') }}" method="POST">
+        <button type="submit">Continue to Payment</button>
+    </form>
+
+    <script>
+        document.getElementById("payment-form").submit();
+    </script>
+</body>
+</html>
