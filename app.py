@@ -26,42 +26,11 @@ app.config["MAIL_DEFAULT_SENDER"] = os.getenv("MAIL_DEFAULT_SENDER")
 app.config['MAIL_TIMEOUT'] = 10
 mail = Mail(app)
 def send_booking_confirmation(booking, total_amount, payment_status):
-    try:
-        msg = Message(
-            subject="Your Varanasi Tour Booking Confirmation",
-            recipients=[booking["email"]]
-        )
-
-        msg.body = f"""
-Hello {booking["name"]},
-
-Thank you for booking with Varanasi Tour Booking!
-
-Here are your booking details:
-
-Customer Name: {booking["name"]}
-Tour: {booking["tour"]}
-Travel Date: {booking["date"]}
-Number of Guests: {booking["guests"]}
-Total Amount: Rs. {total_amount}
-Payment Status: {payment_status}
-
-Please keep this email for your records.
-
-We look forward to welcoming you to Varanasi!
-
-Regards,
-Varanasi Tour Booking Team
-"""
-
-        mail.send(msg)
-        app.logger.info("Booking confirmation email sent successfully.")
-        return True
-
-    except Exception as e:
-        app.logger.exception("Booking confirmation email failed: %s", e)
-        return False
-
+    app.logger.info(
+        "Email temporarily disabled. Booking received for %s",
+        booking["email"]
+    )
+    return True
     except Exception as e:
         app.logger.exception("Failed to send booking confirmation email")
         return False
