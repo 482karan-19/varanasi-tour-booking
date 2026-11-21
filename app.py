@@ -27,14 +27,11 @@ app.config['MAIL_TIMEOUT'] = 10
 mail = Mail(app)
 def send_booking_confirmation(booking, total_amount, payment_status):
     app.logger.info(
-        "Email temporarily disabled. Booking received for %s",
+        "Email disabled temporarily. Booking saved for %s",
         booking["email"]
     )
     return True
 
-    except Exception as e:
-        app.logger.exception("Failed to send booking confirmation email")
-        return False
 
 
 TOUR_PRICES = {
