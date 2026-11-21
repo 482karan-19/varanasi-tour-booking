@@ -23,6 +23,7 @@ app.config["MAIL_USERNAME"] = os.getenv("MAIL_USERNAME")
 app.config["MAIL_PASSWORD"] = os.getenv("MAIL_PASSWORD")
 app.config["MAIL_DEFAULT_SENDER"] = os.getenv("MAIL_DEFAULT_SENDER")
 
+app.config['MAIL_TIMEOUT'] = 10
 mail = Mail(app)
 def send_booking_confirmation(booking, total_amount, payment_status):
     try:
@@ -53,13 +54,13 @@ Regards,
 Varanasi Tour Booking Team
 """
 
-        try:
-            mail.send(msg)
-            print("Booking confirmation email sent successfully.")
-
-        except Exception as e:
-            print(f"Email sending failed: {e}")
+        mail.send(msg)
+        app.logger.info("Booking confirmation email sent successfully.")
         return True
+
+    except Exception as e:
+        app.logger.exception("Booking confirmation email failed: %s", e)
+        return False
 
     except Exception as e:
         app.logger.exception("Failed to send booking confirmation email")
