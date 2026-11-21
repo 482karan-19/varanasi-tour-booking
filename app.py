@@ -31,6 +31,7 @@ def send_booking_confirmation(booking, total_amount, payment_status):
         booking["email"]
     )
     return True
+
     except Exception as e:
         app.logger.exception("Failed to send booking confirmation email")
         return False
